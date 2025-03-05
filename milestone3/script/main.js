@@ -6,28 +6,43 @@
 const priceKm = 0.21;
 
 // FORM
+
 // form
 const ticektForm = document.getElementById('ticket-form');
+
 // name input
 const userName = document.getElementById('name-input');
+
 // km input
 const userKm = document.getElementById('km-input');
+
 // age input
 const userAge = document.getElementById('age-input');
+
 // button submit
 const btnSub = document.getElementById('btn-submit');
 
+// cancel button
+const btnCanc = document.getElementById('btn-cancel');
+
 // TICKET
+const ticket = document.getElementById('ticket');
+
 // passenger name
 const nameArea = document.getElementById('name-area');
+
 // discount amount
 const discArea = document.getElementById('discount-area');
+
 // train carriage number
 const carriageArea = document.getElementById('carriage-area');
+
 // cp code
 const cpArea = document.getElementById('cp-area');
+
 // final ticket price
 const priceArea = document.getElementById('price-area');
+
 
 // action when click on button submit
 ticektForm.addEventListener('submit', function(event) {
@@ -90,4 +105,13 @@ ticektForm.addEventListener('submit', function(event) {
 
     // output price
     priceArea.innerText = `${ticketPrice}€`;
+
+    ticket.classList.toggle('d-none');
+    ticket.classList.add('d-block');
+});
+
+btnCanc.addEventListener('click', function() {
+
+    ticket.classList.toggle('d-block');
+    ticket.classList.add('d-none');
 });
