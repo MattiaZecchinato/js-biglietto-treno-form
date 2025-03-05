@@ -34,7 +34,7 @@ ticektForm.addEventListener('submit', function(event) {
 
     event.preventDefault();
 
-    const userKmInt = parseInt(userKm.value);
+    const userKmInt = parseInt(userKm.value)
     console.log(userKmInt);
     console.log(userAge.value);
 
